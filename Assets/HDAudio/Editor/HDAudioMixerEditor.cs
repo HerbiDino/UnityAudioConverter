@@ -127,11 +127,11 @@ namespace HerbiDino.Audio
             return textElement;
         }
 
-        [MenuItem("HerbiDino/Audio/Audio Mixer")]
+        [MenuItem("Tools/Mixer Editor")]
         private static void ShowWindow()
         {
             var window = GetWindow<HDAudioMixerEditor>();
-            window.titleContent = new GUIContent("Audio Mixer");
+            window.titleContent = new GUIContent("Mixer Editor");
         }
 
         private void LoadVisualTreeAsset()
