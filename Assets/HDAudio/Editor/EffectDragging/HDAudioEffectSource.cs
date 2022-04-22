@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace HerbiDino.Audio
+namespace HD.Audio
 {
     public class HDAudioEffectSource : Box, IHDAudioEffectItem
     {

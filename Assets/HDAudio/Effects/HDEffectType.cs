@@ -1,4 +1,4 @@
-namespace HerbiDino.Audio
+namespace HD.Audio
 {
     public enum HDEffectType
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HerbiDino.Audio
+namespace HD.Audio
 {
     [RequireComponent(typeof(AudioSource))]
     public class HDAudioSource : MonoBehaviour

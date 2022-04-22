@@ -1,7 +1,7 @@
 using UnityEngine.Events;
 using UnityEditor;
 
-namespace HerbiDino.Audio
+namespace HD.Audio
 {
     public class HDAudioEffectDraggingManager
     {

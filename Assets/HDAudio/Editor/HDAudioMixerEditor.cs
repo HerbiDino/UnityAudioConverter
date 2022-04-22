@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
 
-namespace HerbiDino.Audio
+namespace HD.Audio
 {
     public class HDAudioMixerEditor : EditorWindow
     {

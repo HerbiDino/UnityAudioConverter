@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HerbiDino.Audio
+namespace HD.Audio
 {
     public class HDAudioMixerSO : ScriptableObject
     {

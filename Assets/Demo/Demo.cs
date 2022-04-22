@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using HerbiDino.Audio;
+using HD.Audio;
 using UnityEngine.UI;
 
 public class Demo : MonoBehaviour
