@@ -1,19 +1,32 @@
 using UnityEngine.Events;
 using UnityEditor;
+using System.Collections.Generic;
 
 namespace HD.Audio
 {
-    public class HDAudioEffectDraggingManager
+    public class HDAudioEffectManager
     {
         public UnityEvent onSwapEffects;
 
         public HDAudioMixerSO CurrentMixer { get; set; }
         public int SourceIndex { get; set; }
         public int DestinationIndex { get; set; }
+        public List<HDAudioEffect> EffectList { get; set; } = new List<HDAudioEffect>();
+        public int CurrentEffectIndex
+        {
+            get => currentEffectIndex; set
+            {
+                currentEffectIndex = value;
+
+                EffectList.ForEach(sfx => sfx.Deselect());
+                EffectList[currentEffectIndex].Select();
+            }
+        }
 
         private bool CanSwap => DestinationIndex < SourceIndex || DestinationIndex > SourceIndex + 1;
+        private int currentEffectIndex = 0;
 
-        public HDAudioEffectDraggingManager()
+        public HDAudioEffectManager()
         {
             onSwapEffects = new UnityEvent();
             ResetIndices();

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
+using System.Collections.Generic;
 
 namespace HD.Audio
 {
@@ -17,7 +18,7 @@ namespace HD.Audio
         }
 
         private HDAudioMixerSO EditingMixer { get => Manager.EditingMixer; set => Manager.EditingMixer = value; }
-        private HDAudioEffectDraggingManager EffectDraggingManager => Manager.EffectDraggingManager;
+        private HDAudioEffectManager EffectManager => Manager.EffectManager;
 
         private ListView mixerListView;
         private ScrollView effectScrollView;
@@ -84,6 +85,7 @@ namespace HD.Audio
         private void ShowMixer(HDAudioMixerSO mixer)
         {
             effectScrollView.Clear();
+            EffectManager.EffectList = new List<HDAudioEffect>();
 
             if (mixer == null || mixer.Effects.Count == 0) return;
 
@@ -98,7 +100,7 @@ namespace HD.Audio
 
         private void ShowEffect(HDAudioEffectSO sfx, int sfxIndex)
         {
-            var sfxView = new HDAudioEffectSource(() => EffectDraggingManager.SourceIndex = sfxIndex);
+            var sfxView = new HDAudioEffect(() => EffectManager.SourceIndex = sfxIndex, () => EffectManager.CurrentEffectIndex = sfxIndex);
             sfxView.Add(CreateTextElement(HDEditor.TitleText, sfx.Type.ToString()));
 
             var sfxObj = new SerializedObject(sfx);
@@ -116,6 +118,7 @@ namespace HD.Audio
             }
 
             effectScrollView.Add(sfxView);
+            EffectManager.EffectList.Add(sfxView);
         }
 
         private TextElement CreateTextElement(string type, string text)
@@ -223,7 +226,7 @@ namespace HD.Audio
             var removeEffectBtn = rootVisualElement.Query<Button>(HDEffectView.RemoveButton).First();
             if (removeEffectBtn == null) return;
 
-            removeEffectBtn.clicked += () => Manager.RemoveEffect(0);
+            removeEffectBtn.clicked += () => Manager.RemoveEffect(EffectManager.CurrentEffectIndex);
         }
 
         private void SetStoragePathState(TextElement stateText, bool isValid)
@@ -244,9 +247,9 @@ namespace HD.Audio
         private HDAudioEffectDestination CreateEffectDestination(int desIndex)
         {
             return new HDAudioEffectDestination(
-                () => EffectDraggingManager.DestinationIndex = desIndex,
-                EffectDraggingManager.ResetDestination,
-                EffectDraggingManager.SwapTwoEffects
+                () => EffectManager.DestinationIndex = desIndex,
+                EffectManager.ResetDestination,
+                EffectManager.SwapTwoEffects
             );
         }
     }

@@ -9,6 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d750af85043444446bd4c8be30df1859, type: 3}
-  m_Name: HighPass
+  m_Script: {fileID: 11500000, guid: 2cea8e9985d3c584ca671512b0e8c96a, type: 3}
+  m_Name: TheFilter
   m_EditorClassIdentifier: 
+  <Effects>k__BackingField:
+  - {fileID: 11400000, guid: 2551ebd4c9436d94595947593b237fe7, type: 2}
+  - {fileID: 11400000, guid: 50e936da313ff0e42af642b4f010258f, type: 2}
