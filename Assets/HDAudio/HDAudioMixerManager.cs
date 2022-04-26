@@ -6,7 +6,7 @@ namespace HD.Audio
 {
     public class HDAudioMixerManager : HDSingleton<HDAudioMixerManager>
     {
-        [SerializeField] private string storagePath = null;
+        [SerializeField] private string storagePath = "";
 
         public HDAudioMixerSO GetMixer(string name)
         {

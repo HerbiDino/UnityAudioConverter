@@ -359,8 +359,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixers:
-  - {fileID: 11400000, guid: 7650adf65b89121409e38226dbbe0420, type: 2}
-  - {fileID: 11400000, guid: 7134507ecdff4964d9f4e278fd046954, type: 2}
+  - {fileID: 11400000, guid: fec486c49bc603b459887fa20efdee88, type: 2}
+  - {fileID: 11400000, guid: 2dcd7fce46a214945b252338e1e1b56c, type: 2}
   buttonList: {fileID: 932290741}
   buttonPrefab: {fileID: 7763758959536773237, guid: 5d50b619d2242f74c8d82bbe5790db3a, type: 3}
   audioSource: {fileID: 216708217}
@@ -795,6 +795,50 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2962647183415074924, guid: 5d50b619d2242f74c8d82bbe5790db3a, type: 3}
   m_PrefabInstance: {fileID: 1465179734}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1303182499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1303182501}
+  - component: {fileID: 1303182500}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1303182500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303182499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6fba1144ec69dc48a1da41040f00d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storagePath: 
+--- !u!4 &1303182501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303182499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1412428306 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2962647183415074924, guid: 5d50b619d2242f74c8d82bbe5790db3a, type: 3}
