@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cea8e9985d3c584ca671512b0e8c96a, type: 3}
-  m_Name: TheFilter
+  m_Script: {fileID: 11500000, guid: df90c4ee6a91adf4ab4c99ef578bc9e5, type: 3}
+  m_Name: PitchShifter
   m_EditorClassIdentifier: 
-  <Effects>k__BackingField:
-  - {fileID: 11400000, guid: 2551ebd4c9436d94595947593b237fe7, type: 2}
-  - {fileID: 11400000, guid: 50e936da313ff0e42af642b4f010258f, type: 2}
+  pitch: 0
